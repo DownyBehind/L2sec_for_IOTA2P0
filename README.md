@@ -2,22 +2,12 @@
 Implementation for L2sec Protocol on IOTA 2.0 using STM32 
 
 ## Introduction
-This project is an open-source initiative to migrate the existing X-CUBE-IOTA1 repository from the IOTA 1.0 mainnet to the IOTA 2.0 mainnet. IOTA 2.0 introduces significant improvements, including **Decentralized Identity (DID)**, enabling secure, self-sovereign identities for IoT devices. By leveraging IOTA 2.0’s decentralized, feeless ledger, this project aims to build scalable IoT communication with integrated identity management.
+This project is an open-source initiative to migrate the existing X-CUBE-IOTA1 repository from the IOTA 1.0 mainnet to the IOTA 2.0 mainnet. IOTA 2.0 introduces [significant improvements](https://blog.iota.org/iota-2-0-all-you-need-to-know/), including **Decentralized Identity (DID)**, enabling secure, self-sovereign identities for IoT devices. By leveraging IOTA 2.0’s decentralized, feeless ledger, this project aims to build scalable IoT communication with integrated identity management.
 
 ## Purpose
 The goal of this project is to adapt and enhance the original IOTA 1.0-based codebase to IOTA 2.0. The inclusion of **DID** ensures that devices can securely authenticate, interact, and manage data without centralized control, creating a more robust and flexible IoT ecosystem.
 
-## Board Description: B-U585I-IOT02A
-
-The **B-U585I-IOT02A** Discovery kit is an advanced evaluation board by STMicroelectronics designed to help developers prototype IoT applications. It is based on the **STM32U585AI** microcontroller, which offers high-performance, ultra-low-power operation. The board features multiple connectivity options, including Wi-Fi, Bluetooth, and various sensors (temperature, humidity, gas, pressure), making it ideal for IoT, sensor, and secure communication applications.
-
-### Key Features:
-- **Microcontroller**: STM32U585AI ARM Cortex-M33 with TrustZone.
-- **Connectivity**: Wi-Fi, Bluetooth 5.0.
-- **Sensors**: Temperature, humidity, gas, and pressure sensors.
-- **Security**: Integrated secure element for enhanced security.
-
-## Project Introduction
+## Project Development Steps Introduction
 
 For this project, I will be using the **B-U585I-IOT02A** evaluation board to modify the **IOTA-Client** code, focusing on adapting it for compatibility with **IOTA 2.0 transactions**. Specifically, I will implement the **L2Sec protocol** within the IOTA 2.0 framework to ensure secure, feeless IoT transactions using this hardware.
 
@@ -26,7 +16,7 @@ For this project, I will be using the **B-U585I-IOT02A** evaluation board to mod
 
 ### IOTA 1.0 and 2.0 Code Analysis (Focusing on Transaction Interface & DataType)
 
-#### Step 1. IOTA 1.0, 2.0 Code Analysis (Focusing on Transaction Interface & DataType) (~25.03)
+#### Step 1. IOTA 1.0, 2.0 Code Analysis (Focusing on Transaction Interface & DataType) (~MAR.2025)
 
 To analyze IOTA 1.0 and 2.0 from a transactional and datatype perspective, you can:
 
@@ -51,7 +41,7 @@ To analyze IOTA 1.0 and 2.0 from a transactional and datatype perspective, you c
 
 ---
 
-#### Step 2. Code Analysis of [iota-core GitHub Repo](https://github.com/iotaledger/iota-core) (~25.06)
+#### Step 2. Code Analysis of [iota-core GitHub Repo](https://github.com/iotaledger/iota-core) (~JUN.2025)
 
 The IOTA Core repository on GitHub hosts the main code for IOTA 2.0. To analyze it:
 
@@ -69,7 +59,7 @@ The IOTA Core repository on GitHub hosts the main code for IOTA 2.0. To analyze 
 
 ---
 
-#### 3. IOTA 2.0 Compatible Transaction Interface Implementation (~25.09)
+#### Step 3. IOTA 2.0 Compatible Transaction Interface Implementation (~SEP.2025)
 
 To implement IOTA 2.0-compatible transaction interfaces using the **Client code from [STMicroelectronics IOTA-Client](https://github.com/STMicroelectronics/x-cube-iota1/tree/main/Projects/B-U585I-IOT02A/Applications/IOTA-Client)**, specifically focusing on making the **L2Sec protocol** compatible with IOTA 2.0 transactions, follow these steps:
 
@@ -173,9 +163,9 @@ A typical use case includes a constrained IoT device transmitting sensor data ov
 ### References
 This project is based on the research paper "[Enabling Secure Data Exchange through the IOTA Tangle for IoT Constrained Devices](https://doi.org/10.3390/s22041384)" which introduces the L2Sec protocol and details the integration of IOTA with STM32 for secure IoT communication. 
 
-### What is IOTA? 
+# What is IOTA? 
 
-# Introduction to IOTA
+## Introduction to IOTA
 
 IOTA is an open-source distributed ledger technology (DLT) designed specifically for the Internet of Things (IoT). Unlike traditional blockchains, IOTA operates without the use of blocks or miners, which allows for feeless transactions, increased scalability, and faster confirmation times.
 
@@ -205,3 +195,13 @@ IOTA is an open-source distributed ledger technology (DLT) designed specifically
 IOTA envisions a world where devices, machines, and people can exchange data and value securely and without intermediaries. With its scalable and feeless architecture, IOTA is positioned as a foundational technology for the evolving IoT landscape.
 
 For more information, visit the [IOTA Wiki](https://wiki.iota.org/get-started/introduction/iota/introduction/).
+
+# Board Description: B-U585I-IOT02A
+
+The [**B-U585I-IOT02A**](https://www.mouser.kr/ProductDetail/STMicroelectronics/B-U585I-IOT02A?qs=Jslch3jnSjk0oS%252BiVUwGOA%3D%3D&srsltid=AfmBOoon3yQ4c29WL5cM1gr_XMa0__0HzI8tuIrtAAyAIfRPC9ywWHQb) Discovery kit is an advanced evaluation board by STMicroelectronics designed to help developers prototype IoT applications. It is based on the **STM32U585AI** microcontroller, which offers high-performance, ultra-low-power operation. The board features multiple connectivity options, including Wi-Fi, Bluetooth, and various sensors (temperature, humidity, gas, pressure), making it ideal for IoT, sensor, and secure communication applications.
+
+## Key Features:
+- **Microcontroller**: STM32U585AI ARM Cortex-M33 with TrustZone.
+- **Connectivity**: Wi-Fi, Bluetooth 5.0.
+- **Sensors**: Temperature, humidity, gas, and pressure sensors.
+- **Security**: Integrated secure element for enhanced security.
